@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&family=Nunito:wght@700&display=swap");
+
+:root {
+  /* BACKGROUND COLORS */
+  --video-overlay: rgba(255, 255, 255, 0.1);
+  --container-no-blur: rgba(255, 255, 255, 0.85);
+  --container-blur: rgba(255, 255, 255, 0.5);
+
+  /* COlORS */
+  --primary-color: #001e1d;
+  --primary-accent: #004643;
+  --secondary-color: #222525;
+  --neutral: #fff;
+  --dark: #000;
+  --btn-hover: #0f3433;
+
+  /* FONT FAMILIES */
+  --cabin: "Cabin", sans-serif;
+  --nunito: "Nunito", sans-serif;
+
+  /* FONT WEIGHTS */
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+
+  /* FONT SIZES */
+  --fs300: 1rem;
+  --fs400: 1.25rem;
+  --fs600: 2.25rem;
+  --fs700: 2.75rem;
+  --fs800: 3.5rem;
+
+  /* BORDER RADIUS */
+  --br-ele: 25px;
+  --br-container: 10px;
+
+  /* MARGINS */
+  --space: 1.75rem;
+}
+
+@media (min-width: 650px) {
+  :root {
+    --fs500: 1.75rem;
+    --fs600: 2.5rem;
+    --fs700: 3rem;
+    --fs800: 6rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+input,
+label,
+button {
+  font: inherit;
+  display: block;
+}
+
+ul[class] {
+  list-style-type: none;
+  padding: 0;
+}
+
+body {
+  font-family: var(--cabin);
+  font-size: var(--fs400);
+  font-weight: var(--fw-400);
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.btn {
+  font-family: var(--nunito);
+  background: var(--primary-accent);
+  color: var(--neutral);
+  width: 100%;
+  padding: 0.65rem 0;
+  border: none;
+  border-radius: var(--br-ele);
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+}
+
+.intro-title {
+  font-family: "Nunito", sans-serif;
+  font-size: var(--fs700);
+  font-weight: var(--fw-700);
+}
+
+.flow-content > * + * {
+  margin-top: var(--space);
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+.split > * {
+  margin: 0;
+}
+
+.split > * + * {
+  margin: calc(0.5 * var(--space)) 0 0 0;
+}
+
+@media (min-width: 650px) {
+  .split {
+    flex-direction: row;
+  }
+
+  .split > * {
+    margin: 0 var(--space) 0 var(--space);
+  }
+}
+
+.center-text {
+  text-align: center;
+}
+
+.mg-btm {
+  margin-bottom: var(--self-value, 1.75rem);
+}
+
+.sections {
+  padding: 3rem 2rem;
+}
+
+.video-background,
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.video-background {
+  object-fit: cover;
+  object-position: 60% 50%;
+  z-index: -2;
+}
+
+.video-overlay {
+  background: var(--video-overlay);
+  z-index: -1;
+}
+
+.container {
+  width: 95%;
+  max-width: 42.5rem;
+  min-height: 27.5rem;
+  background: var(--container-no-blur);
+  border-radius: var(--br-container);
+}
+
+@supports (backdrop-filter: blur(5px)) {
+  .container {
+    background: var(--container-blur);
+    backdrop-filter: blur(5px);
+  }
+}
+
+.date-picker label {
+  --self-value: 0.15rem;
+  font-weight: var(--fw-500);
+  padding: 0 0 0 0.55rem;
+}
+
+.date-picker input {
+  background: none;
+  border: 2px solid var(--dark);
+  width: 100%;
+  border-radius: var(--br-ele);
+  padding: 0.45rem 0.75rem;
+}
+
+.date-picker input[type="text"] {
+  padding: 0.55rem 0.75rem;
+}
+
+.date-picker input::placeholder {
+  color: var(--primary-color);
+  font-size: var(--fs300);
+}
+
+.date-picker input:focus {
+  background: #a7c4bc;
+}
+
+.countdown-container .time {
+  --self-value: 3rem;
+  justify-content: center;
+}
+
+.time li {
+  display: flex;
+  flex-direction: column;
+}
+
+.time li span {
+  font-size: var(--fs800);
+  color: var(--secondary-color);
+}
+
+@media (min-width: 650px) {
+  .time li {
+    font-size: var(--fs500);
+  }
+}
+
+.complete-container {
+  min-height: 100%;
+  position: relative;
+  top: 1.75rem;
+}
+
+.complete-container .completed-desc {
+  font-size: var(--fs600);
+}
+
+@media (min-width: 600px) {
+  .complete-container {
+    min-height: 100%;
+    top: 4rem;
+  }
+}

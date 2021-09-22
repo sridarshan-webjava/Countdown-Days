@@ -1,0 +1,54 @@
+
+/* .btn {
+  padding: 0.65rem 0;
+  display: block;
+  background: #4a47a3;
+  color: #fff;
+  border-radius: 25px;
+  border: none;
+  width: 100%;
+}
+
+.intro-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.date-picker {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  flex-basis: 40%;
+  padding: 2rem;
+}
+
+.date-picker div {
+  margin-bottom: 1.25rem;
+}
+
+.date-picker label {
+  margin-bottom: 0.25rem;
+}
+
+.date-picker input {
+  font-size: 1.25rem;
+  background: none;
+  border: 2px solid #000;
+  width: 100%;
+  border-radius: 25px;
+  padding: 0.45rem 0.75rem;
+}
+
+.date-picker input[type="text"] {
+  padding: 0.55rem 0.75rem;
+} */
+
+  /* background-color: #8ec5fc;
+   background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  background-image: url("https://cdn.pixabay.com/photo/2021/05/30/13/06/lake-6295829__340.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
